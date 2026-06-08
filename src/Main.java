@@ -3,6 +3,10 @@ import exercicio1.Bolsista;
 import exercicio2.Discente;
 import exercicio2.Docente;
 import exercicio2.Pessoa;
+import exercicio3.Ebook;
+import exercicio3.Livro;
+import exercicio3.Midia;
+import exercicio3.Revista;
 
 public static void main() {
     System.out.println("---------------------------Hello World---------------------------");
@@ -24,4 +28,17 @@ public static void main() {
     System.out.println(roberto);
 
     System.out.println("-----------------------------------------------------------------");
+
+    List<Midia> midias = new ArrayList<>();
+    midias.add(new Midia("FMA Brotherhood", 2009));
+    midias.add(new Livro("O Guia do Mochileiro das Galáxias", 1979, "Dougals Adams"));
+    midias.add(new Revista("National Geographic", 2023, 245));
+    midias.add(new Ebook("Clean Code", 2008, "pdf"));
+    for (Midia midia : midias) {
+        System.out.println(midia.ficha());
+    }
+
+    System.out.println("-----------------------------------------------------------------");
+
+
 }
